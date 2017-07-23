@@ -1,0 +1,15 @@
+<div class="projectlist">
+
+	<div>
+		<div class="projectitem" ng-repeat="year in years" ng-click="selectYear(year)" ng-class="{selected : selectedYear === year}">
+		{{year}}
+		</div>
+	</div>
+
+	<div>
+		<div class="projectitem" ng-repeat="project in projects">
+			<a ng-href="/projects/{{selectedYear}}/{{project}}" target="blank">{{project}}</a>
+		</div>
+	</div>
+
+</div>

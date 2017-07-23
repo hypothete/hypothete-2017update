@@ -1,0 +1,82 @@
+body{
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight:300;
+	color: #444;
+	background: #eee;
+	margin: 0;
+	line-height:1.25;
+	left: 0;
+	top: 0;
+	width: 100%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+a{
+	color: #666;
+	text-decoration: none;
+	border-bottom: 1px solid #666;
+}
+
+a:visited{
+	color: #88a;
+	border-bottom: 1px solid #88a;
+}
+
+.content {
+	margin: 0 1em 0 1em;
+	padding: 2em;
+	width: 90%;
+	max-width: 980px;
+}
+
+.menu > span {
+	padding-right: 2em;
+}
+
+.view {
+	margin-top: 2em;
+	border-top: 1px dashed #444;
+	padding-top: 1em;
+}
+
+.projectlist {
+	display: flex;
+	flex-direction: column;
+}
+
+.projectlist > div {
+	width: 100%;
+	padding: 1em;
+}
+
+.projectitem {
+	padding: 0.25em;
+	margin-bottom: 0.5em;
+	cursor: pointer;
+}
+
+.selected {
+	background-color: rgba(0,0,0,0.1);
+}
+
+@media screen and (min-width: 980px) {
+
+	.projectlist {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.projectlist > div {
+		width: 75%;
+		padding: 1em;
+	}
+
+	.projectlist > div:first-child {
+		width: 25%;
+		margin-right: 2em;
+	}
+}

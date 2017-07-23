@@ -1,0 +1,95 @@
+body{
+	font-family: 'Raleway', sans-serif;
+	font-weight:300;
+	color: #fff;
+	text-shadow: 0px 0px 1em black;
+	background: #000;
+	margin: 0;
+	line-height:1.25;
+	left: 0;
+	top: 0;
+	width: 100%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	overflow-x: hidden;
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px solid #fff;
+}
+
+a:visited, a:hover{
+	color: #fff;
+	border-bottom: 1px dotted #fff;
+}
+
+.content {
+	margin: 0 1em 0 1em;
+	padding: 2em;
+	width: 90%;
+	max-width: 980px;
+}
+
+.menu > span {
+	padding-right: 2em;
+}
+
+.projectlist {
+	display: flex;
+	flex-direction: column;
+}
+
+.projectlist > div {
+	width: 100%;
+	padding: 1em;
+}
+
+.projectnames {
+	height: 80vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.projectitem {
+	padding: 0.25em;
+	margin-bottom: 0.5em;
+	cursor: pointer;
+}
+
+.selected {
+	border-bottom: 1px dotted #fff;
+}
+
+@media screen and (min-width: 980px) {
+
+	.projectlist {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.projectlist > div {
+		width: 75%;
+		padding: 1em;
+	}
+
+	.projectlist > div:first-child {
+		width: 25%;
+		margin-right: 2em;
+	}
+
+	.projectnames {
+		height: auto;
+	}
+}
+
+#bg-canvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}

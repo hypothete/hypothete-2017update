@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Duncan Alexander - hypothete.com</title>
+		<meta name="p:domain_verify" content="f8f0ce2921dd920862b677d7a97b3ac1"/>
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<div class="content">
+			<header>
+				<h3>
+					Web experiments by Duncan Alexander
+				</h3>
+			</header>
+
+			<div class="interface">
+				<background>.</background>
+				<div class="menu">
+					<span><a href="#" @click="menuitem='projects'">Projects</a></span>
+					<span><a href="#" @click="menuitem='about'">About</a></span>
+					<span><a href="resume/index.html" rel="noopener">Resume</a></span>
+				</div>
+
+				<div class="projects projectlist" v-show="menuitem==='projects'">
+					<div>
+						<div class="projectitem" v-for="year in years" @click="selectYear(year)">
+							<span :class="{selected : selectedYear === year}">{{year}}</span>
+						</div>
+					</div>
+
+					<div class="projectnames">
+						<div class="projectitem" v-for="project in projects">
+							<a :href="'/projects/'+selectedYear+'/'+project" target="blank" noreferrer>{{project}}</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="about" v-show="menuitem==='about'">
+					<p>
+						I'm a front-end web developer living in Portland, Oregon. Since 2013 I have worked at <a href="http://pollinate.com" target="blank">Pollinate</a>, producing visualizations for product customizer apps. Outside of work, I dabble in game design, procedural generation, and image processing techniques.
+					</p>
+
+					<p>
+						hypothete.com has been my repository for web content since 2009. Most of the site is graphics experiments, games, software tools, and artwork. If you are interested in my work or just want to talk about an idea, you can reach me on <a href="http://twitter.com/Hypothete" target="blank" rel="noopener">Twitter</a> or over <a href="mailto:duncan@hypothete.com">email</a>.
+					</p>
+				</div>
+			</div>
+
+		</div>
+
+		<script src="minified.js"></script>
+	</body>
+</html>
